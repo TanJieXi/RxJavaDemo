@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     public void btnOne(View view) {
         //1.2
         //5.6
+        //3.4
         Observable.create(new ObservableOnSubscribe<String>() {
             @Override
             public void subscribe(ObservableEmitter<String> e) throws Exception {
