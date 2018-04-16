@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void btnOne(View view) {
         //1.2
-        //3.4
+        //3.422222
         Observable.create(new ObservableOnSubscribe<String>() {
             @Override
             public void subscribe(ObservableEmitter<String> e) throws Exception {
