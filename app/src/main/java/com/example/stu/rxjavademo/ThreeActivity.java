@@ -5,6 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import java.util.concurrent.TimeUnit;
 
 import io.reactivex.Observable;
@@ -26,6 +29,31 @@ public class ThreeActivity extends AppCompatActivity {
     }
 
     public void btnOne(View view) {
+
+        try {
+
+            JSONObject startJson = new JSONObject();
+            startJson.put("code","followbgm");
+            JSONArray heal = new JSONArray();
+            for(int i = 0 , len = 2 ; i < len ; i ++){
+                JSONObject json = new JSONObject();
+                json.put("type",i);
+                json.put("drug_name",i + "name");
+                heal.put(json);
+            }
+            startJson.put("healthyDrug",heal);
+            startJson.put("name","以");
+            Log.i("dfdasfgdsf",startJson.toString());
+
+        }catch (Exception e){
+
+        }
+
+
+
+
+
+
         // concat()：组合多个被观察者( <= 4个 )一起发送数据
         //注：串行执行
         Observable.concat(
