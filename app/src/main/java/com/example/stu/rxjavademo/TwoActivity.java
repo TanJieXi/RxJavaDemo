@@ -27,6 +27,7 @@ public class TwoActivity extends RxAppCompatActivity {
         setContentView(R.layout.activity_two);
     }
 
+
     public void btnOne(View view) {
         /*.compose(this.<Integer>bindToLifecycle())*/
         Observable.create(new ObservableOnSubscribe<Integer>() {
